@@ -1,0 +1,73 @@
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+html{
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; 
+  }
+  
+body{
+    font-size: 1.6rem;
+    margin: 0px;
+    padding: 0px;
+    font-family:'Aleo', sans-serif;
+  }
+  
+h1{
+    font-family:'Aleo', sans-serif;
+    @include font(8rem, 700, 9.6rem);
+    color: $color-text;
+    letter-spacing: 0.015em;
+
+    @include media-laptop{
+      @include font(6rem, 700, 9.6rem);
+    }
+
+    @include media-tablet {
+      text-align:center;
+      @include font(4rem, 700, 4rem);
+    }
+
+    @include media-tablet {
+      display: none;
+    }
+}
+
+h2{
+    font-family: "Red Hat Text", sans-serif;
+    @include font(4rem, 500, 5.3rem);
+    color: $color-brend;
+    letter-spacing: .5px;
+
+    @include media-tablet {
+      @include font(3.2rem, 400, 3.5rem);
+    }
+    @include media-mobile {
+      @include font(1.4rem, 500, 1.9rem);
+      letter-spacing: .02rem;
+    }
+}
+
+h4{
+    font-family:'Aleo', sans-serif;
+    @include font(3.5rem, 400, 4.2rem);
+    color: $color-additional;
+
+    @include media-laptop{
+      padding-top: 10px;
+      @include font(2.5rem, 400, 3rem);
+  }
+    @include media-tablet{
+      padding-top: 10px;
+      @include font(1.1rem, 700, 1.3rem);
+  }
+    @include media-tablet{
+      padding-top: 5px;
+      letter-spacing: .2px;
+      // @include font(1.1rem, 700, 1.3rem);
+  }
+}

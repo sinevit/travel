@@ -1,0 +1,53 @@
+.ico{
+    cursor: pointer;
+    display: inline-block;
+}
+
+.ico_bike{
+    background-image: url('../assets/svg/bycicle.svg');
+    width: 50px;
+    height: 45px;
+    @include media-mobile{
+        background-image: url('../assets/svg/bike-mini.svg');
+        width: 35px;
+        height: 31px;
+    }
+}
+
+.ico_calc{
+    background-image: url('../assets/svg/calc.svg');
+    width: 52px;
+    height: 52px;
+    @include media-mobile{
+        background-image: url('../assets/svg/calc-mini.svg');
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.ico_plane{
+    background-image: url('../assets/svg/plane.svg');
+    width: 60px;
+    height: 45px;
+    @include media-mobile{
+        background: url('../assets/svg/plane-mini.svg') no-repeat center;
+        width: 40x;
+        height: 30px;
+    }
+}
+
+.icon__square{
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    background-color: $color-brend;
+
+    @include media-tablet{
+        width: 70px;
+        height: 70px;
+    }
+
+}
