@@ -1,0 +1,219 @@
+.destinations__wrapper{
+    text-align: center;
+    margin-bottom: 82px;
+
+    @include media-mobile{
+        margin-bottom: 20px;
+    }
+}
+
+.carusel-wrapper{
+    width: 1440px;
+    overflow: hidden;
+    padding: 50px 0 20px;
+    
+
+    @include media-laptop{
+        display: flex;
+        width: auto;
+    }
+
+    @include media-tablet{
+        padding: 15px 0 12px;
+    }
+    
+}
+
+.carusel{
+    display: flex;
+    column-gap: 60px;
+    position: relative;
+    left: -1400px;
+
+    @include media-laptop{
+        column-gap: 40px;
+        left: calc(-100vw + 30px);
+    }
+
+    @include media-tablet{
+        column-gap: 10px;
+        left: calc(-200vw + 5px);
+    }
+
+    @include media-mobile{
+        column-gap: 0px;
+        left: calc(-200vw + 10px);
+    }
+
+}
+
+.card{
+    width:800px;
+    height: 800px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-shrink: 0;
+
+    @include media-laptop{
+        width: 57vw;
+        height: 57vw;
+        border-radius: 16px;
+    }
+
+    @include media-tablet{
+        width: calc(100vw - 10px);
+        align-items: flex-start;
+    }
+
+    @include media-mobile{
+        width: calc(100vw - 10px);
+    }
+
+    span{
+        font-family: 'RedHatText', sans-serif;
+        @include font(3.2rem, 500, 4.2rem);
+        color: $color-text;
+        padding-left: 15px;
+        padding-bottom: 40px;
+    
+        @include media-tablet{
+            @include font(2rem, 500, 2.6rem);
+            padding: 15px 25px;
+        }
+    }
+}
+
+.card1{
+    background: url("../assets/img/spain.jpg") no-repeat center;
+    @include media-mobile{
+        background: url("../assets/img/spain_mini.jpg") no-repeat center;  
+    }
+}
+
+.card2{
+    background: url("../assets/img/japan.jpg") no-repeat center;
+     @include media-mobile{
+        background: url("../assets/img/japan_mini.jpg") no-repeat center;  
+    }    
+}
+
+.card3{
+    background: url("../assets/img/usa.jpg") no-repeat center;
+    @include media-mobile{
+        background: url("../assets/img/usa_mini.jpg") no-repeat center;  
+    }
+
+}
+
+.paginationBtn{
+    display: flex;
+}
+
+.btn__arrow{
+    display: none;
+    @include media-tablet{
+
+        display: flex;
+        background: url('../assets/svg/arrow.svg') no-repeat center;
+        width: 30px;
+        height: 30px;
+    }
+
+    &:hover{
+        background-color: $color-hover;
+        border-radius: 50%;
+    }
+}
+.arrow--left{
+    margin-top: -200px;
+    transform: rotate(180deg);
+    padding-left: 10px;
+    @include media-mobile{
+        margin-top: -140px;
+    }
+}
+
+.arrow--right{
+    margin-top: -200px;
+    z-index: 9;
+    padding-right: 10px;
+    @include media-mobile{
+        margin-top: -140px;
+    }
+}
+
+.item-none{
+    .card{
+        filter: contrast(50%);
+    }
+}
+
+.destinations__button{   
+    margin-top: -10px;
+}
+
+@keyframes move-left{
+    from{left: -1440px;}
+    to{ left: -540px;}
+}
+@keyframes move-left-l{
+    from{left:-100vw;}
+    to{ left:-40vw;}
+}
+@keyframes move-left-t{
+    from{left:-150vw;}
+    to{ left:-100vw;}
+}
+@keyframes move-left-m{
+    from{left: calc(-200vw + 10px);}
+    to{ left:-100vw;}
+}
+
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 2s;
+    transition-timing-function: linear;
+    @include media-laptop{
+        animation-name: move-left-l;
+    }  
+    @include media-tablet{
+        animation-name: move-left-t;
+    }  
+    @include media-mobile{
+        animation-name: move-left-m;
+    }
+}
+
+
+@keyframes move-right{
+    from{left:-1440px;}
+    to{ left:-2300px;}
+}
+@keyframes move-right-l{
+    from{left:-100vw;}
+    to{ left:-160vw;}
+}
+@keyframes move-right-t{
+    from{left:-200vw;}
+    to{ left:-300vw;}
+}
+@keyframes move-right-m{
+    from{left: calc(-200vw + 10px);}
+    to{ left:-300vw;}
+}
+
+.transition-right {
+    animation-name: move-right;
+    transition-timing-function: linear;
+    animation-duration: 2s;
+    @include media-laptop{
+            animation-name: move-right-l;
+     }
+    @include media-tablet{
+            animation-name: move-right-t;
+     }
+    @include media-mobile{
+            animation-name: move-right-m;
+     }
+}

@@ -1,0 +1,116 @@
+.preview{
+    background: url("../assets/img/1bg.jpg") no-repeat center;
+    @include media-mobile {
+        background: url("../assets/img/bg1-mini.jpg") no-repeat center;
+    
+        // border-radius: 25px 25px 0 0;
+    }
+}
+
+.wrapper__preview{
+    @include media-mobile {
+        padding: 0;
+        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+    }
+}
+
+.preview__content{
+    padding:30px 120px;
+    margin-right: 310px;
+
+    @include media-laptop {
+        margin-right: auto;
+        padding: 30px 70px;
+    }
+
+    @include media-tablet{
+        margin-right: auto;
+        padding: 30px;
+    }
+    @include media-mobile{
+        padding: 67px 15px 61px;
+    }
+}
+
+.preview__description{
+    padding-top: 35px;
+    color: #FFFFFF;
+    font-family: "Aleo", sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 2.4rem;
+    @include font(2rem, 0, 2.4rem, italic);
+
+    @include media-tablet {
+        display: none;
+    }
+
+}
+.search{
+    padding-bottom: 180px;
+
+    @include media-laptop{
+        padding-bottom: 50px;
+    }
+    @include media-mobile{
+        padding-bottom: 0px;
+    }
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 16px;
+    margin: 46px 0;
+    height: 95px;
+
+    @include media-tablet{
+        height: 48px;
+    }
+    @include media-mobile{
+        margin: 0;
+    }
+}
+
+input{
+    border: none;
+    background: none;
+    padding: 43px 45px 41px 41px;
+    font-family: 'Aleo', sans-serif;
+    @include font(2.4rem, 400, 2.9rem, italic);
+    width: 50%;
+
+    @include media-tablet {
+        @include font(1.4rem, 400, 1.7rem, italic);
+        padding: 17px;
+    }
+    @include media-mobile {
+        width: 45%;
+
+    }
+}
+
+input::-webkit-input-placeholder { 
+    color: $color-brend;
+}
+
+.search__btn{
+    font-family: "Red Hat Text", sans-serif;
+    @include font(2.4rem, 500, 3.2rem);
+    margin: 17px 20px;
+    text-align: center;
+    @include media-laptop{
+        font-size: 1.5rem;
+    }
+    @include media-tablet{
+        @include font(1.1rem, 500, 1.5rem);
+        padding: 10px;
+        margin: 9px;
+    }
+    @include media-mobile{
+        @include font(1.1rem, 500, 1.5rem);
+        padding: 9px;
+        margin: 8px 9px;
+    }
+}

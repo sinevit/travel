@@ -1,0 +1,30 @@
+// @import url('https://fonts.googleapis.com/css2?family=Aleo:ital@0;1&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Aleo:ital@0;1&family=Red+Hat+Text:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital@0;1&family=Magra:wght@400;700&family=Red+Hat+Text:wght@400;700&display=swap');
+
+@import "../../node_modules/normalize-scss/sass/normalize";
+
+@import "abstract/_constant.scss";
+@import "abstract/mixins";
+@import "abstract/placeholder";
+
+
+@import "base/_base.scss";
+@import "base/buttons";
+@import "base/icons";
+@import "base/hamburger";
+@import "base/modal";
+
+@import "laouts/wrapper";
+@import "laouts/header";
+@import "laouts/footer";
+
+
+@import "component/preview";
+@import "component/_steps";
+@import "component/navigation";
+@import "component/destination";
+@import "component/paginations";
+@import "component/_stories.scss";
+@import "component/story";
+@import "component/popup";

@@ -1,0 +1,20 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Private repository for @sinevit",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch travel/sass/style.scss travel/sass/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "y"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "normalize-scss": "^7.0.1",
+    "webpack": "^5.73.0"
+  }
+}

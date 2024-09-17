@@ -1,0 +1,115 @@
+.wrapper__steps{
+    padding: 80px 131px 60px;
+
+    @include media-laptop{
+        padding: 80px 60px 60px;
+    }
+    @include media-tablet{
+        padding: 50px 30px;
+    }
+    @include media-tablet{
+        padding: 20px 15px 0px;
+    }
+}
+
+.steps__content{
+    text-align: center;
+}
+
+.layout-3-column{
+    padding: 37px 130px;
+    display: flex;
+    justify-content: space-between;
+
+    @include media-laptop{
+        padding: 37px 10px;
+    }
+
+    @include media-tablet{
+        column-gap: 50px;
+        padding: 37px 10px;
+    }
+
+    @include media-mobile{
+        padding: 20px 0;
+        column-gap: 0px;
+        display: flex;
+        // column-gap: 45px;
+        // justify-content: space-between;
+    }
+
+}
+
+.step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-mobile{
+        width: 30%;
+    } 
+}
+.step:nth-child(2){
+    padding-left: 60px;
+
+    @include media-tablet{
+        padding: 0px;
+    }
+}
+.step:nth-child(1){
+    @include media-tablet{
+        align-items: flex-start;
+    }
+}
+.step:nth-child(3){
+    @include media-tablet{
+        align-items: flex-end;
+    }
+}
+
+.step__icon{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background: $color-brend;
+    border-radius: 16px;
+
+    @include media-tablet{
+        width: 70px;
+        height: 70px;
+    } 
+    @include media-mobile{
+        // display: flex;
+        margin: 0;
+    } 
+
+}
+
+.icon2{
+
+    @include media-mobile{
+        margin: 0 30px;
+    } 
+
+}
+
+.step__title{
+    font-family: 'Aleo',sans-serif;
+    @include font(2rem, 400, 2.4rem);
+    color: $color-additional;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    letter-spacing: .01rem;
+
+    @include media-tablet{
+        margin-top: 15px;
+        @include font(1.2rem, 400, 1.2rem);
+    }
+    @include media-mobile{
+        margin: 0;
+        margin-top: 20px;
+        @include font(1rem, 400, 1.2rem);
+        // width: max-content;
+    }
+}
